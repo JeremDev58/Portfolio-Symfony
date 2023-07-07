@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Welcome!{% endblock %}</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="CSS/step.css" />
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- Test -->
+  <!-- <link rel="stylesheet" href="https://use.typekit.net/phg5cnq.css"> -->
+
+  <script type="text/javascript" src="{{ asset('JS/pixi.min.js') }}"></script>
+
+  {% block css %}
+
+  {% endblock %}
+
+</head>
+<body  class="step">
+
+  <!-- ////////////////////////// MENU ////////////////////////// -->
+
+      <label class="main-nav-open nav-toggle" for="main-nav-toggle" tabindex="0">
+        <svg aria-hidden="true" width="28px" height="20px" viewBox="0 0 28 20">
+          <rect x="0" y="2" width="28" height="2"></rect>
+          <rect x="0" y="10" width="24" height="2"></rect>
+          <rect x="0" y="18" width="28" height="2"></rect>
+        </svg>
+</label>
+<input type="checkbox" id="main-nav-toggle" />
+<nav class="main-nav" id="main-nav">
+  <ul class="main-nav__fallback">
+    <li>
+      <a onclick="menu();GhostVanish();setTimeout(function () {location.href='{{ path('competence') }}'},1000);">Compètences</a>
+    </li>
+    <li>
+      <a onclick="menu();GhostVanish();setTimeout(function () {location.href='{{ path('projet') }}'},1000);">Projets</a>
+    </li>
+    <li>
+      <a onclick="menu();GhostVanish();setTimeout(function () {location.href='{{ path('contact') }}'},1000);">Contact</a>
+    </li>
+  </ul>
+  <label class="main-nav__close nav-toggle" for="main-nav-toggle" tabindex="0" />
+</nav>
+
+  <!-- ////////////////////////// FIN MENU ////////////////////////// -->
+
+  {% block body %}
+
+  {% endblock %}
+
+  <!-- ///////////////////////// SCRIPT ///////////////////////////// -->
+
+  <!-- Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!-- Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/6fee70888d.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+  <!-- TweenMax Plugin CSS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+
+  <!-- TweenMax -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/TextPlugin.min.js"></script>
+
+  <!-- Menu -->
+  <script type="text/javascript" src="{{ asset('JS/Menu.js') }}"></script>
+
+  <script type="text/javascript" src="{{ asset('JS/script.js') }}"></script>
+
+  <!-- Test -->
+
+
+
+
+  {% block script %}
+
+  {% endblock %}
+
+</body>
+</html>

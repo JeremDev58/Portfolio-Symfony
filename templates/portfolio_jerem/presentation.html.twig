@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}
+
+
+{% endblock %}
+
+{% block body %}
+
+<section class="ghost">
+  <div class="row">
+    <h1 class="text-center col-12">Présentation</h1>
+    <div class="container col-6 order2" style="font-size: 3vw;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+    <div class="container col-6 order1">
+      <img src="{{ asset('img/moi.png') }}" class="img-fluid" alt="">
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block script %}
+
+<script type="text/javascript" src="{{ asset('JS/script.js') }}"></script>
+
+{% endblock %}

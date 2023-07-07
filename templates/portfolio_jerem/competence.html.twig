@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+<section class="ghost text-center competences">
+
+<h1 class="col-12">Compètences</h1>
+
+<h4 class="col-12">Langage</h4>
+<div class="row justify-content-center">
+<div class="text-center p-5 col-12 col-md-6 col-lg-3">
+  <i class="fab fa-html5"></i>
+  <p>HTML 5</p>
+</div>
+<div class="text-center p-5 col-12 col-md-6 col-lg-3 item2">
+  <i class="fab fa-css3-alt"></i>
+  <p>CSS3</p>
+</div>
+<div class="text-center p-5 col-12 col-md-6 col-lg-3 item3">
+  <i class="fab fa-js-square"></i>
+  <p>Vanilla JavaScript</p>
+</div>
+<div class="text-center p-5 col-12 col-md-6 col-lg-3 item4">
+  <i class="fab fa-php"></i>
+  <p>PHP 7</p>
+</div>
+<h4 class="col-12">FrameWork</h4>
+<div class="row justify-content-center">
+<div class="text-center p-5 col-12 col-md-6 col-lg-3 item5">
+  <i class="fab fa-bootstrap"></i>
+  <p>Bootstrap 4</p>
+</div>
+<div class="text-center p-5 col-12 col-md-6 col-lg-3 item6">
+  <i class="fab fa-symfony"></i>
+  <p>Symfony 4</p>
+</div>
+<div class="text-center p-5 col-12 col-md-6 col-lg-3 item7">
+  <i class="fab fa-react"></i>
+  <p>React.js</p>
+</div>
+<div class="text-center p-5 col-12 col-md-6 col-lg-3 item8">
+  <i class="fab fa-wordpress-simple"></i>
+  <p>WordPress</p>
+</div>
+</div>
+
+</div>
+</section>
+
+{% endblock %}
+
+{% block script %}
+
+<script type="text/javascript" src="{{ asset('JS/script.js') }}"></script>
+
+{% endblock %}

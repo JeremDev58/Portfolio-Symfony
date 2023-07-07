@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<section class='ghost'>
+<div class="grid">
+
+  {% for projet in projets %}
+
+  <div class="grid-item card">
+    <img src="https://place-hold.it/250x300" alt="Image projet" style="width:100%">
+    <div class="container">
+      <h4>{{ projet.title }}</h4>
+      <p>{{ projet.resume | raw }}</p>
+    </div>
+    <div class="card-footer">
+      <a href="{{ projet.linkGit }}"><i class="fab fa-github"></i></a>
+      <a href="{{ projet.linkCp }}"><i class="fab fa-codepen"></i></a>
+    </div>
+  </div>
+
+{% endfor %}
+
+</div>
+</section>
+
+{% endblock %}
+
+{% block script %}
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<script type="text/javascript" src="{{ asset('JS/masonry.js') }}"></script>
+
+{% endblock %}
